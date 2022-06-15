@@ -28,6 +28,9 @@ To get a local copy up and running follow these simple example steps.
 
 <!-- [live link](https://secret-meadow-93386.herokuapp.com/ ) -->
 
+## Screenshot
+![](./src/students_profile.png)
+
 ## Author
 
 👤 **Enekwechi Chinonso Gerald**
