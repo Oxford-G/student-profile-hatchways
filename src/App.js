@@ -34,8 +34,8 @@ const API_ENDPOINT = 'https://api.hatchways.io/assessment/students';
 
 const App = () => {
 
-  const [searchTerm, setSearchTerm] = React.useState('in');
-  const [filterTag, setFilterTag] = React.useState('tag');
+  const [searchTerm, setSearchTerm] = React.useState('');
+  // const [filterTag, setFilterTag] = React.useState('tag');
 
   const allArray = [];
   const [stories, dispatchStories] = React.useReducer(storiesReducer,
@@ -67,21 +67,21 @@ const App = () => {
     setSearchTerm(event.target.value);
   };
 
-  const handleTagSearch = (event) => {
-    setFilterTag(event.target.value);
-  };
+  // const handleTagSearch = (event) => {
+  //   setFilterTag(event.target.value);
+  // };
 
   const searchedStories = stories.data.filter((story) => 
     (story.firstName.toLowerCase().includes(searchTerm.toLowerCase())) 
       || (story.lastName.toLowerCase().includes(searchTerm.toLowerCase()))
   )
 
-  const filterTags = allArray.filter((el)=> 
-    el.toLowerCase().includes(filterTag.toLowerCase())
-  )
+  // const filterTags = allArray.filter((el)=> 
+  //   el.toLowerCase().includes(filterTag.toLowerCase())
+  // )
 
-  const combineSearch = searchedStories.concat(filterTags)
-  console.log(combineSearch)
+  // const combineSearch = searchedStories.concat(filterTags)
+  // console.log(combineSearch)
 
   return (
     <div className="App">
@@ -97,14 +97,14 @@ const App = () => {
 
       <hr />
 
-      <InputWithLabel
+      {/* <InputWithLabel
         id="tag"
         value={filterTag}
         onInputChange={handleTagSearch}
         placeholder="Search by tag"
-      />
+      /> */}
 
-      <hr />
+      {/* <hr /> */}
 
       {stories.isError && <p>Something went wrong ...</p>}
 
@@ -112,7 +112,7 @@ const App = () => {
         <p>Loading ...</p>
         ) : (
         <List
-        list={combineSearch}
+        list={searchedStories}
         allArray={allArray}
         />
       )}

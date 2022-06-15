@@ -84,7 +84,6 @@ const Item = ({item, allArray}) => {
         </form>
       </span>
 
-
       <span>
         {item.grades.map((grade, index) => {
         return (
