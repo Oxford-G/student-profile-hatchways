@@ -4,7 +4,7 @@
 Students-Profile is a mobile responsive app that fetch data from public JSON API, and present
 the information on the screen. users can filter the list of students
 by their name (including full name!). Also each student have an expandable list view, so that all
-of their test scores may be viewed. Tere is also a text input field to add tags for a specific student.
+of their test scores may be viewed. There is also a text input field to add tags for a specific student.
 
 ## Built With
 
